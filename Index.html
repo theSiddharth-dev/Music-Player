@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music player</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="musicplayer.css">
+  </head>
+  <body>
+    <div
+      class="wrapper text-white w-screen h-screen flex justify-center bg-[#282828] items-center"
+    >
+      <div
+        class="musicplayer w-80 rounded-[50px] p-1.5 bg-[#1B1B1B] shadow-Cxl/90"
+      >
+        <div
+          class="lightcontainer bg-[#535353] shadow-xl/30 rounded-[50px] p-1.5"
+        >
+        <div class="text-center p-2 flex justify-center items-center"><span class="bg-black w-25 h-5 rounded-[50px] text-[#535353] "></span></div>
+          <div class="screen w-full rounded-[50px]">
+            <div class="roundimg w-full rounded-[50px] w-full h-75 flex justify-center  items-center bg-black">
+              <img
+              class=" object-cover h-65 rounded-[50px] shadow-[#535353]
+              shadow-xl  w-65"
+              src="https://i.pinimg.com/736x/fb/84/32/fb8432ba21aeb68c14d6e5df64f7066b.jpg"
+              alt="music theme"
+            />
+            </div>
+          </div>
+          <div class="middlepart flex justify-between items-center p-4 w-full">
+            <div class="textpart flex flex-col">
+              <p class="songname  text-2xl tracking-tighter">songname</p>
+              <p class=" artist text-lg tracking-tighter">artist</p>
+              <p class=" text-sm collection leading-none tracking-tighter">collection name</p>
+            </div>
+            <div class="likebtn rounded-[50%] cursor-pointer">
+              <i class="ri-heart-3-line text-2xl"></i>
+            </div>
+          </div>
+
+         <div class="progressbar p-1">
+           <audio  class="audioplayer"></audio>
+          <input type="range" value="0" class="songprogress w-full appearance-none h-[6px] bg-white rounded custom-scrollbar ">
+         </div>
+
+          <div class="barwrapper flex justify-center items-center mb-2">
+            <div
+              class="bar w-60 flex justify-evenly items-center pb-1.5 rounded-[50px] shadow-xl/60 shadow-[#282828]"
+            >
+              <div 
+                class="playbtn cursor-pointer p-3 rounded-[50%] shadow-lg/20 flex justify-center items-center "
+              >
+                <i class="ri-play-large-line"></i>
+              </div>
+              <div class="previousbtn cursor-pointer text-2xl rounded-[50%]">
+                <i class="ri-skip-left-fill"></i>
+              </div>
+              <div class="backwardbtn cursor-pointer text-lg rounded-[50%]">
+                <i class="ri-replay-10-line text-center"></i>
+              </div>
+              <div class="forwardbtn cursor-pointer text-lg rounded-[50%] ">
+                <i class="ri-forward-10-line"></i>
+              </div>
+              <div class="nextbtn cursor-pointer rounded-[50%] text-2xl">
+                  <i class="ri-skip-right-fill"></i>
+              </div>
+              <div
+                class="stylebtn cursor-pointer w-15 shadow-lg/40 rounded-[50%]"
+              >
+                <img
+                  class="rounded-[50%]"
+                  src="https://media.istockphoto.com/id/172261653/photo/metal-disc-button.jpg?s=2048x2048&w=is&k=20&c=v8k1bF7GwmmsZwTAYmltV6c1Rj8MJzsvuuEZraubapM="
+                  alt="silver btn"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
